@@ -280,38 +280,6 @@ VillageVibe/
 └── __tests__/            # Frontend tests
 ```
 
-### Available Scripts
-
-**Frontend:**
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Start production server
-npm run lint         # Run ESLint
-npm test             # Run tests
-```
-
-**Backend:**
-```bash
-npm run dev          # Start development server with nodemon
-npm test             # Run tests
-```
-
-### Testing
-
-The project includes both frontend and backend tests:
-
-- **Frontend**: Jest + React Testing Library
-- **Backend**: Jest + Supertest
-
-Run tests:
-```bash
-# Frontend tests
-npm test
-
-# Backend tests
-cd backend && npm test
-```
 
 ## 🔒 Security Features
 
@@ -329,27 +297,6 @@ cd backend && npm test
 - **App-like Experience**: Full-screen mode and native feel
 - **Push Notifications**: Real-time booking updates
 
-## 🚀 Deployment
-
-### Frontend (Vercel/Netlify)
-
-1. Connect your repository to Vercel or Netlify
-2. Set environment variables:
-   - `NEXT_PUBLIC_API_URL`: Your backend API URL
-3. Deploy
-
-### Backend (Railway/Heroku)
-
-1. Connect your repository to Railway or Heroku
-2. Set environment variables:
-   - `MONGO_URI`: MongoDB connection string
-   - `JWT_SECRET`: Secure JWT secret
-   - `EMAIL_USER`: Gmail address
-   - `EMAIL_PASS`: Gmail app password
-   - `RAZORPAY_KEY_ID`: Razorpay key
-   - `RAZORPAY_KEY_SECRET`: Razorpay secret
-   - `FRONTEND_URL`: Your frontend URL
-3. Deploy
 
 ## 🤝 Contributing
 
