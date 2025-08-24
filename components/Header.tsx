@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect, useRef } from 'react'
 import { Menu, X, User, LogOut, Settings, Home, Calendar, Award, Bookmark, Search, Bell, Globe, ChevronDown, UserCheck, MapPin, Star, Heart, TrendingUp, CheckCircle, AlertCircle, Info } from 'lucide-react'
-import LanguageDetectorComponent, { LanguageContext, useTranslation } from './LanguageDetector'
+import LanguageDetector, { LanguageContext, useTranslation } from './LanguageDetector'
 import { useAuth } from './AuthContext'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -102,7 +102,7 @@ export default function Header() {
           <div className="flex items-center space-x-3">
             {/* Language Selector */}
             <div className="hidden md:block">
-              <LanguageDetectorComponent />
+                              <LanguageDetector />
             </div>
 
             {/* Notifications */}

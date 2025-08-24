@@ -30,7 +30,7 @@ function EditListingForm({ listing, onSave, onCancel }: { listing: any; onSave: 
     const updatedListing = {
       ...listing,
       ...formData,
-      location: {
+  location: {
         village: formData.village,
         state: formData.state
       }
@@ -385,7 +385,7 @@ export default function HostDashboardPage() {
                 <Plus className="w-4 h-4 inline mr-2" />
                 Add Listing
               </Link>
-            </div>
+        </div>
           </div>
         </div>
 
@@ -395,20 +395,20 @@ export default function HostDashboardPage() {
             const Icon = stat.icon
             return (
               <div key={index} className="bg-white rounded-2xl p-6 shadow-sm border border-earth-100">
-                <div className="flex items-center justify-between">
-                  <div>
+            <div className="flex items-center justify-between">
+              <div>
                     <p className="text-sm font-medium text-earth-600">{stat.title}</p>
                     <p className="text-2xl font-bold text-earth-800 mt-1">{stat.value}</p>
                     <p className="text-xs text-green-600 mt-1">{stat.change} from last month</p>
-                  </div>
+              </div>
                   <div className={`p-3 rounded-xl ${stat.bgColor}`}>
                     <Icon className={`w-6 h-6 ${stat.color}`} />
-                  </div>
-                </div>
+            </div>
+          </div>
               </div>
             )
           })}
-        </div>
+            </div>
 
         {/* Tabs */}
         <div className="bg-white rounded-2xl shadow-sm border border-earth-100 mb-8">
@@ -439,7 +439,7 @@ export default function HostDashboardPage() {
             {activeTab === 'overview' && (
               <div className="space-y-6">
                 {/* Recent Bookings */}
-                <div>
+              <div>
                   <h3 className="text-lg font-semibold text-earth-800 mb-4">Recent Bookings</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {sampleBookings.slice(0, 3).map((booking) => (
@@ -456,13 +456,13 @@ export default function HostDashboardPage() {
                             <p className="text-sm text-earth-600">{booking.guestsCount} guests</p>
                           </div>
                         </div>
-                      </div>
+              </div>
                     ))}
-                  </div>
-                </div>
+            </div>
+          </div>
 
                 {/* Top Performing Listings */}
-                <div>
+              <div>
                   <h3 className="text-lg font-semibold text-earth-800 mb-4">Top Performing Listings</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {hostListings.slice(0, 3).map((listing) => (
@@ -479,11 +479,11 @@ export default function HostDashboardPage() {
                             <p className="text-sm font-medium text-primary-600">₹{listing.price}/night</p>
                           </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
+                    ))}
+            </div>
+          </div>
+        </div>
             )}
 
             {activeTab === 'listings' && (
@@ -534,13 +534,13 @@ export default function HostDashboardPage() {
                               Delete
                             </button>
                           </div>
-                        </div>
+                      </div>
                       </div>
                     </div>
                   ))}
                 </div>
-              </div>
-            )}
+                </div>
+              )}
 
             {activeTab === 'bookings' && (
               <div className="space-y-6">
@@ -602,8 +602,8 @@ export default function HostDashboardPage() {
                     <p className="text-3xl font-bold text-yellow-600">₹12,500</p>
                   </div>
                 </div>
-              </div>
-            )}
+                </div>
+              )}
 
             {activeTab === 'profile' && (
               <div className="space-y-6">
@@ -639,7 +639,7 @@ export default function HostDashboardPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+            </div>
             )}
           </div>
         </div>

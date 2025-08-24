@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Enable standalone output for Docker
+  output: 'standalone',
+  
   // PWA Configuration
   async headers() {
     return [
@@ -17,7 +20,7 @@ const nextConfig = {
 
   // Image Optimization
   images: {
-    domains: ['images.unsplash.com', 'localhost', 'railway.app'],
+    domains: ['images.unsplash.com', 'localhost'],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -75,7 +78,7 @@ const nextConfig = {
     ]
   },
 
-  // Rewrites for Railway deployment
+  // Rewrites
   async rewrites() {
     return [
       {
@@ -84,9 +87,6 @@ const nextConfig = {
       },
     ]
   },
-
-  // Output configuration for Railway
-  output: 'standalone',
 }
 
 module.exports = nextConfig

@@ -91,17 +91,17 @@ export default function DashboardPage() {
       ]
 
       const fallbackExperiences = [
-        {
-          _id: '1',
+    {
+      _id: '1',
           title: 'Himalayan Village Trekking Adventure',
           description: 'Embark on an unforgettable journey through remote Himalayan villages.',
           location: { village: 'Manali Valley', state: 'Himachal Pradesh' },
           price: 3500,
           rating: 4.9,
           images: ['https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop']
-        },
-        {
-          _id: '2',
+    },
+    {
+      _id: '2',
           title: 'Coastal Fishing Village Experience',
           description: 'Immerse yourself in the traditional fishing lifestyle of coastal India.',
           location: { village: 'Gokarna Beach', state: 'Karnataka' },
@@ -368,7 +368,7 @@ export default function DashboardPage() {
             </div>
           </div>
         </div>
-
+        
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {stats.map((stat, index) => {
@@ -389,7 +389,7 @@ export default function DashboardPage() {
             )
           })}
         </div>
-
+        
         {/* Tabs */}
         <div className="bg-white rounded-2xl shadow-sm border border-earth-100 mb-8">
           <div className="border-b border-earth-100">
@@ -434,17 +434,17 @@ export default function DashboardPage() {
                             <h4 className="font-medium text-earth-800">{booking.listing?.title}</h4>
                             <p className="text-sm text-earth-600">{booking.checkIn} - {booking.checkOut}</p>
                             <p className="text-sm text-earth-600">{booking.guestsCount} guests</p>
-                          </div>
-                        </div>
-                      </div>
+              </div>
+              </div>
+            </div>
                     ))}
-                  </div>
-                </div>
+      </div>
+    </div>
 
                 {/* Saved Items Preview */}
                 <div>
                   <h3 className="text-lg font-semibold text-earth-800 mb-4">Recently Saved</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {realSavedVillages.slice(0, 3).map((item: any) => (
                       <div key={item._id} className="bg-earth-50 rounded-xl p-4 border border-earth-200">
                         <div className="flex items-center space-x-3">
@@ -457,14 +457,14 @@ export default function DashboardPage() {
                             <h4 className="font-medium text-earth-800">{item.title}</h4>
                             <p className="text-sm text-earth-600">{item.location.village}, {item.location.state}</p>
                             <p className="text-sm font-medium text-primary-600">₹{item.price}/night</p>
-                          </div>
-                        </div>
-                      </div>
+            </div>
+          </div>
+      </div>
                     ))}
-                  </div>
-                </div>
-              </div>
-            )}
+          </div>
+            </div>
+          </div>
+        )}
 
             {activeTab === 'saved' && (
               <div className="space-y-6">
@@ -473,8 +473,8 @@ export default function DashboardPage() {
                   <Link href="/explore" className="text-primary-600 hover:text-primary-700 font-medium">
                     Explore More
                   </Link>
-                </div>
-                
+      </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {realSavedVillages.map((item: any) => (
                     <div key={item._id} className="bg-white rounded-2xl shadow-sm border border-earth-100 overflow-hidden hover:shadow-md transition-shadow">
@@ -490,12 +490,12 @@ export default function DashboardPage() {
                           <div className="flex items-center space-x-2">
                             <MapPin className="w-4 h-4 text-earth-400" />
                             <span className="text-sm text-earth-600">{item.location.village}, {item.location.state}</span>
-                          </div>
+          </div>
                           <div className="flex items-center space-x-1">
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />
                             <span className="text-sm font-medium">{item.rating}</span>
-                          </div>
-                        </div>
+              </div>
+          </div>
                         <div className="flex items-center justify-between mt-3">
                           <span className="text-lg font-bold text-primary-600">₹{item.price}/night</span>
                           <Link
@@ -504,9 +504,9 @@ export default function DashboardPage() {
                           >
                             View Details
                           </Link>
-                        </div>
-                      </div>
-                    </div>
+      </div>
+    </div>
+        </div>
                   ))}
                 </div>
               </div>
@@ -562,13 +562,13 @@ export default function DashboardPage() {
                           >
                             View
                           </Link>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
                 </div>
               </div>
-            )}
+            </div>
+          ))}
+                </div>
+        </div>
+      )}
 
             {activeTab === 'reviews' && (
               <div className="space-y-6">
@@ -589,30 +589,30 @@ export default function DashboardPage() {
                                     }`}
                                   />
                                 ))}
-                              </div>
+    </div>
                               <span className="text-sm text-earth-600">{review.listing?.title}</span>
-                            </div>
+            </div>
                             <p className="text-earth-700 mb-2">{review.content}</p>
                             <p className="text-sm text-earth-500">{new Date(review.createdAt).toLocaleDateString()}</p>
-                          </div>
+          </div>
                           <button
                             onClick={() => handleDeleteReview(review._id)}
                             className="text-red-600 hover:bg-red-50 p-2 rounded-lg transition-colors"
                           >
                             <Trash2 className="w-4 h-4" />
-                          </button>
-                        </div>
-                      </div>
+            </button>
+          </div>
+        </div>
                     ))
                   ) : (
                     <div className="text-center py-12">
                       <Star className="w-16 h-16 mx-auto mb-4 text-earth-400" />
                       <h3 className="text-lg font-medium text-earth-600 mb-2">No Reviews Yet</h3>
                       <p className="text-earth-500">Start exploring villages and share your experiences!</p>
-                    </div>
+      </div>
                   )}
                 </div>
-              </div>
+          </div>
             )}
 
             {activeTab === 'profile' && (
@@ -622,12 +622,12 @@ export default function DashboardPage() {
                   <div className="flex items-center space-x-4 mb-6">
                     <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
                       {user.name?.charAt(0)?.toUpperCase()}
-                    </div>
+        </div>
                     <div>
                       <h4 className="text-xl font-semibold text-earth-800">{user.name}</h4>
                       <p className="text-earth-600">{user.email}</p>
-                    </div>
-                  </div>
+      </div>
+    </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-earth-700 mb-2">Full Name</label>
@@ -637,7 +637,7 @@ export default function DashboardPage() {
                         className="w-full px-3 py-2 border border-earth-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         readOnly
                       />
-                    </div>
+          </div>
                     <div>
                       <label className="block text-sm font-medium text-earth-700 mb-2">Email</label>
                       <input
@@ -646,17 +646,17 @@ export default function DashboardPage() {
                         className="w-full px-3 py-2 border border-earth-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         readOnly
                       />
-                    </div>
+        </div>
                   </div>
                 </div>
               </div>
             )}
           </div>
         </div>
-      </div>
+          </div>
 
       <Footer />
-      
+
       {toast && (
         <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />
       )}

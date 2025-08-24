@@ -85,13 +85,9 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/villagevi
 .then(() => console.log('✅ Connected to MongoDB'))
 .catch(err => console.error('❌ MongoDB connection error:', err));
 
-// Health check endpoint for Railway
+// Basic routes
 app.get('/api/health', (req, res) => {
-  res.status(200).json({ 
-    status: 'OK', 
-    message: 'VillageVibe Backend is running',
-    timestamp: new Date().toISOString()
-  });
+  res.json({ status: 'OK', message: 'VillageVibe API is running' });
 });
 
 // Core API routes
