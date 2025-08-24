@@ -1,0 +1,41 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#gradient)"/>
+  
+  <!-- House/roof -->
+  <path d="M50 125L100 75L150 125H140V150H60V125H50Z" fill="white"/>
+  
+  <!-- Door -->
+  <rect x="80" y="137" width="40" height="40" fill="white"/>
+  <rect x="85" y="142" width="30" height="30" fill="#059669"/>
+  
+  <!-- Windows -->
+  <rect x="60" y="110" width="20" height="20" fill="white"/>
+  <rect x="120" y="110" width="20" height="20" fill="white"/>
+  
+  <!-- Window frames -->
+  <rect x="65" y="115" width="10" height="10" fill="#059669"/>
+  <rect x="125" y="115" width="10" height="10" fill="#059669"/>
+  
+  <!-- Trees -->
+  <circle cx="35" cy="160" r="12" fill="#4ade80"/>
+  <rect x="32" y="160" width="6" height="15" fill="#166534"/>
+  
+  <circle cx="165" cy="160" r="12" fill="#4ade80"/>
+  <rect x="162" y="160" width="6" height="15" fill="#166534"/>
+  
+  <!-- Sun -->
+  <circle cx="160" cy="50" r="15" fill="#fbbf24"/>
+  
+  <!-- Sun rays -->
+  <path d="M160 30L160 25M160 175L160 170M185 100L190 100M130 100L125 100M175 75L180 70M145 130L140 125M175 125L180 130M145 70L140 75" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#047857;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#065f46;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

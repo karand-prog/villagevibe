@@ -52,8 +52,17 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-primary-700 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-              <Home className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-primary-700 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="white"/>
+                <path d="M8 20L16 12L24 20H22V24H10V20H8Z" fill="#059669"/>
+                <rect x="13" y="22" width="6" height="6" fill="#059669"/>
+                <rect x="10" y="18" width="3" height="3" fill="#059669"/>
+                <rect x="19" y="18" width="3" height="3" fill="#059669"/>
+                <circle cx="6" cy="26" r="2" fill="#4ade80"/>
+                <rect x="5.5" y="26" width="1" height="2" fill="#166534"/>
+                <circle cx="26" cy="8" r="2" fill="#fbbf24"/>
+              </svg>
             </div>
             <div>
               <span className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
