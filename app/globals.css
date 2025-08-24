@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Leaflet CSS for maps */
-@import 'leaflet/dist/leaflet.css';
+/* Leaflet CSS for maps - removed to fix build issues */
 
 /* Custom CSS Variables */
 :root {

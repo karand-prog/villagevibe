@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react'
-import 'leaflet/dist/leaflet.css'
 
 export default function StrongMapClient({ 
   lat, 
