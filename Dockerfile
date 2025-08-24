@@ -47,21 +47,18 @@ RUN chown nextjs:nodejs .next
 COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
-COPY --from=builder --chown=nextjs:nodejs /app/start.sh ./start.sh
-
-# Make startup script executable
-RUN chmod +x start.sh
 
 USER nextjs
 
+# Expose the port (will be overridden by Railway's PORT env var)
 EXPOSE 3000
 
-ENV PORT 3000
+# Set hostname to localhost
 ENV HOSTNAME "0.0.0.0"
 
-# Health check
+# Health check (use PORT env var)
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:3000/ || exit 1
+  CMD curl -f http://localhost:${PORT:-3000}/ || exit 1
 
 # Start the application
-CMD ["./start.sh"]
+CMD ["npm", "start"]
