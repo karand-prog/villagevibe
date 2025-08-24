@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    // Use local MongoDB if available, otherwise use in-memory database
-    const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/villagevibe';
+    // Use Railway DATABASE_URL, then MONGO_URI, then local MongoDB
+    const mongoURI = process.env.DATABASE_URL || process.env.MONGO_URI || 'mongodb://localhost:27017/villagevibe';
     
     await mongoose.connect(mongoURI);
     
