@@ -2,54 +2,226 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+/* Leaflet CSS for maps */
+@import 'leaflet/dist/leaflet.css';
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+/* Custom CSS Variables */
+:root {
+  --primary-50: #f0f9ff;
+  --primary-100: #e0f2fe;
+  --primary-200: #bae6fd;
+  --primary-300: #7dd3fc;
+  --primary-400: #38bdf8;
+  --primary-500: #0ea5e9;
+  --primary-600: #0284c7;
+  --primary-700: #0369a1;
+  --primary-800: #075985;
+  --primary-900: #0c4a6e;
   
-  body {
-    @apply font-sans text-earth-800 bg-earth-50;
+  --earth-50: #fafaf9;
+  --earth-100: #f5f5f4;
+  --earth-200: #e7e5e4;
+  --earth-300: #d6d3d1;
+  --earth-400: #a8a29e;
+  --earth-500: #78716c;
+  --earth-600: #57534e;
+  --earth-700: #44403c;
+  --earth-800: #292524;
+  --earth-900: #1c1917;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+body {
+  color: var(--earth-800);
+  background: var(--earth-50);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Custom Components */
+.btn-primary {
+  @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-earth-50 text-earth-700 font-medium py-2 px-4 rounded-lg border border-earth-300 transition-colors duration-200;
+}
+
+.btn-outline {
+  @apply border border-primary-600 text-primary-600 hover:bg-primary-50 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-earth-700 hover:bg-earth-100 focus:outline-none focus:ring-2 focus:ring-earth-300;
+}
+
+.btn-link {
+  @apply inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 underline-offset-4 hover:underline;
+}
+
+.ripple {
+  @apply relative overflow-hidden;
+}
+
+.ripple::after {
+  content: '';
+  @apply absolute inset-0 bg-white/20 scale-0 rounded-lg transition-transform duration-300;
+}
+
+.ripple:active::after {
+  @apply scale-100;
+}
+
+.input {
+  @apply w-full px-3 py-2 border border-earth-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200;
+}
+
+.input-field {
+  @apply w-full rounded-lg border border-earth-300 bg-white px-4 py-2 text-earth-800 placeholder-earth-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-300;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-sm border border-earth-200 overflow-hidden;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full bg-earth-100 px-2.5 py-0.5 text-xs font-medium text-earth-700;
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60;
+}
+
+.hover-card {
+  @apply transition-transform duration-200 will-change-transform hover:-translate-y-0.5 hover:shadow-lg;
+}
+
+.nav-link {
+  @apply text-earth-700 hover:text-primary-600 transition-colors font-medium;
+}
+
+.nav-cta {
+  @apply btn-primary hidden xl:inline-flex;
+}
+
+.kicker {
+  @apply uppercase tracking-wider text-xs font-semibold text-primary-600;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent;
+}
+
+.bg-gradient-primary {
+  @apply bg-gradient-to-r from-primary-600 to-primary-700;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section-padding {
+  @apply py-16;
+}
+
+.hero-modern {
+  @apply py-20 bg-gradient-to-br from-primary-50 to-earth-50;
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@layer components {
-  .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl;
-  }
-  
-  .btn-secondary {
-    @apply bg-earth-100 hover:bg-earth-200 text-earth-800 font-medium py-3 px-6 rounded-lg transition-colors duration-200 border border-earth-200;
-  }
-  
-  .card {
-    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-earth-100;
-  }
-  
-  .input-field {
-    @apply w-full px-4 py-3 border border-earth-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-custom {
+    @apply px-4;
   }
   
   .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
+    @apply py-12;
   }
   
-  .container-custom {
-    @apply max-w-7xl mx-auto;
+  .hero-modern {
+    @apply py-16;
   }
 }
 
-@layer utilities {
-  .text-gradient {
-    @apply bg-gradient-to-r from-primary-600 to-sunset-500 bg-clip-text text-transparent;
-  }
-  
-  .bg-gradient-primary {
-    @apply bg-gradient-to-br from-primary-500 to-primary-700;
-  }
-  
-  .bg-gradient-sunset {
-    @apply bg-gradient-to-br from-sunset-400 to-sunset-600;
-  }
-} 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--earth-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--earth-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--earth-400);
+}
+
+/* Leaflet Map Customization */
+.leaflet-container {
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-content {
+  margin: 12px 16px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.leaflet-popup-tip {
+  background: white;
+}
+
+.leaflet-control-attribution {
+  font-size: 11px;
+  color: var(--earth-500);
+}
+

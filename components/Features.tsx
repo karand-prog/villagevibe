@@ -60,17 +60,18 @@ const Features = () => {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-            What Makes <span className="text-gradient">VillageVibe</span> Unique
+            Feature Availables
           </h2>
           <p className="text-xl text-earth-600 max-w-3xl mx-auto">
-            We're not just another booking site. We're a platform that respects and uplifts local culture and lives.
+            Explore features you can use today across the site.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div 
+            <a 
               key={index}
+              href={feature.title.includes('Direct Booking') ? '/explore' : feature.title.includes('Skill Exchange') ? '/experiences' : feature.title.includes('Impact Certificates') ? '/achievements' : feature.title.includes('Transparent Revenue') ? '/blockchain' : '#'}
               className="card p-6 text-center group hover:scale-105 transition-transform duration-300"
             >
               <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-earth-100 flex items-center justify-center group-hover:bg-primary-100 transition-colors duration-300`}>
@@ -82,7 +83,7 @@ const Features = () => {
               <p className="text-earth-600 leading-relaxed">
                 {feature.description}
               </p>
-            </div>
+            </a>
           ))}
         </div>
 

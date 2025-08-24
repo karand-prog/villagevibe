@@ -1,0 +1,76 @@
+@import 'leaflet/dist/leaflet.css';
+
+/* Leaflet Map Customization */
+.leaflet-container {
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-content {
+  margin: 12px 16px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.leaflet-popup-tip {
+  background: white;
+}
+
+.leaflet-control-attribution {
+  font-size: 11px;
+  color: var(--earth-500);
+}
+
+/* Custom Map Marker */
+.custom-marker {
+  background: none;
+  border: none;
+  font-size: 24px;
+  text-align: center;
+  line-height: 30px;
+  color: #dc2626;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Map Controls */
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.leaflet-control-zoom a {
+  background: white !important;
+  color: var(--earth-700) !important;
+  border: 1px solid var(--earth-200) !important;
+  border-radius: 6px !important;
+  margin: 2px !important;
+  transition: all 0.2s ease !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: var(--primary-50) !important;
+  color: var(--primary-700) !important;
+  border-color: var(--primary-300) !important;
+}
+
+.leaflet-control-scale {
+  background: white !important;
+  border: 1px solid var(--earth-200) !important;
+  border-radius: 6px !important;
+  padding: 4px 8px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.leaflet-control-scale-line {
+  border: 1px solid var(--earth-300) !important;
+  border-top: none !important;
+  color: var(--earth-700) !important;
+  font-size: 11px !important;
+  line-height: 1.1 !important;
+  padding: 2px 5px 1px !important;
+  background: white !important;
+}
