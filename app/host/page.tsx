@@ -210,7 +210,7 @@ const HostPage = () => {
             village: formData.village,
             state: formData.state
           },
-          images: images.map((_, index) => `https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&v=${index}`),
+          images: images.map((_, index) => `https://picsum.photos/400/300?random=${index + 100}`),
           createdAt: new Date().toISOString(),
           host: {
             name: 'Demo Host',

@@ -18,7 +18,7 @@ const nextConfig = {
 
   // Image Optimization
   images: {
-    domains: ['images.unsplash.com', 'localhost'],
+    domains: ['picsum.photos', 'ui-avatars.com', 'localhost'],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -76,15 +76,8 @@ const nextConfig = {
     ]
   },
 
-  // Rewrites
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api'}/:path*`,
-      },
-    ]
-  },
+  // Remove problematic rewrites that point to localhost
+  // API calls should be handled directly in components with proper fallbacks
 }
 
 module.exports = nextConfig

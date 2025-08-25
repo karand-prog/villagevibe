@@ -68,7 +68,7 @@ export default function DashboardPage() {
           location: { village: 'Manali Valley', state: 'Himachal Pradesh' },
           price: 2500,
           rating: 4.8,
-          images: ['https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop']
+          images: ['https://picsum.photos/400/300?random=200']
         },
         {
           _id: 'gokarna-beach',
@@ -77,7 +77,7 @@ export default function DashboardPage() {
           location: { village: 'Gokarna Beach', state: 'Karnataka' },
           price: 1800,
           rating: 4.6,
-          images: ['https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop']
+          images: ['https://picsum.photos/400/300?random=201']
         },
         {
           _id: 'jaisalmer-desert',
@@ -86,7 +86,7 @@ export default function DashboardPage() {
           location: { village: 'Jaisalmer Desert', state: 'Rajasthan' },
           price: 2200,
           rating: 4.7,
-          images: ['https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop']
+          images: ['https://picsum.photos/400/300?random=202']
         }
       ]
 
