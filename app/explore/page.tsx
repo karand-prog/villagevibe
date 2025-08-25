@@ -170,13 +170,13 @@ export default function ExplorePage() {
       price: 2500,
       rating: 4.8,
       images: [
-        'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop'
+        'https://picsum.photos/800/600?random=1',
+        'https://picsum.photos/800/600?random=2'
       ],
       amenities: ['Mountain View', 'Traditional Food', 'Local Guide', 'Adventure Activities'],
       host: {
         name: 'Rajesh Thakur',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
+        avatar: 'https://ui-avatars.com/api/?name=Rajesh+Thakur&background=random&color=fff&size=100',
         rating: 4.9,
         totalHostings: 45
       },
@@ -203,13 +203,13 @@ export default function ExplorePage() {
       price: 1800,
       rating: 4.6,
       images: [
-        'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop'
+        'https://picsum.photos/800/600?random=3',
+        'https://picsum.photos/800/600?random=4'
       ],
       amenities: ['Beach Access', 'Fresh Seafood', 'Boat Tours', 'Sunset Views'],
       host: {
         name: 'Priya Menon',
-        avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop',
+        avatar: 'https://ui-avatars.com/api/?name=Priya+Menon&background=random&color=fff&size=100',
         rating: 4.7,
         totalHostings: 32
       },
@@ -236,13 +236,13 @@ export default function ExplorePage() {
       price: 2200,
       rating: 4.7,
       images: [
-        'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop'
+        'https://picsum.photos/800/600?random=5',
+        'https://picsum.photos/800/600?random=6'
       ],
       amenities: ['Desert Views', 'Traditional Food', 'Camel Rides', 'Cultural Shows'],
       host: {
         name: 'Lakshmi Singh',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
+        avatar: 'https://ui-avatars.com/api/?name=Lakshmi+Singh&background=random&color=fff&size=100',
         rating: 4.8,
         totalHostings: 28
       },
@@ -302,13 +302,13 @@ export default function ExplorePage() {
       price: 2800,
       rating: 4.8,
       images: [
-        'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop'
+        'https://picsum.photos/800/600?random=7',
+        'https://picsum.photos/800/600?random=8'
       ],
       amenities: ['Backwater Views', 'Houseboat Stay', 'Local Cuisine', 'Boat Tours'],
       host: {
         name: 'Maria Fernandes',
-        avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop',
+        avatar: 'https://ui-avatars.com/api/?name=Maria+Fernandes&background=random&color=fff&size=100',
         rating: 4.8,
         totalHostings: 41
       },
@@ -335,13 +335,13 @@ export default function ExplorePage() {
       price: 1500,
       rating: 4.5,
       images: [
-        'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop'
+        'https://picsum.photos/800/600?random=9',
+        'https://picsum.photos/800/600?random=10'
       ],
       amenities: ['Tribal Culture', 'Traditional Food', 'Local Guide', 'Handicraft Workshops'],
       host: {
         name: 'Rajesh Kumar',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
+        avatar: 'https://ui-avatars.com/api/?name=Rajesh+Kumar&background=random&color=fff&size=100',
         rating: 4.6,
         totalHostings: 23
       },
@@ -443,7 +443,7 @@ export default function ExplorePage() {
 												<div className="relative">
 													<Link href={`/explore/${item._id}`}>
 														<Image
-															src={item.images?.[0] || 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop'}
+															src={item.images?.[0] || 'https://picsum.photos/400/300?random=99'}
 															alt={item.title}
 															width={400}
 															height={192}

@@ -136,12 +136,12 @@ export default function ExperiencesPage() {
         coordinates: [32.2432, 77.1892]
       },
       images: [
-        'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800&h=600&fit=crop'
+        'https://picsum.photos/800/600?random=11',
+        'https://picsum.photos/800/600?random=12'
       ],
       host: {
         name: 'Rajesh Kumar',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
+        avatar: 'https://ui-avatars.com/api/?name=Rajesh+Kumar&background=random&color=fff&size=100',
         rating: 4.8,
         totalExperiences: 45
       },
@@ -167,12 +167,12 @@ export default function ExperiencesPage() {
         coordinates: [14.5500, 74.3167]
       },
       images: [
-        'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop'
+        'https://picsum.photos/800/600?random=13',
+        'https://picsum.photos/800/600?random=14'
       ],
       host: {
         name: 'Priya Sharma',
-        avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop',
+        avatar: 'https://ui-avatars.com/api/?name=Priya+Sharma&background=random&color=fff&size=100',
         rating: 4.6,
         totalExperiences: 32
       },
@@ -197,12 +197,12 @@ export default function ExperiencesPage() {
         coordinates: [26.9117, 70.9227]
       },
       images: [
-        'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop'
+        'https://picsum.photos/800/600?random=15',
+        'https://picsum.photos/800/600?random=16'
       ],
       host: {
         name: 'Amit Singh',
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
+        avatar: 'https://ui-avatars.com/api/?name=Amit+Singh&background=random&color=fff&size=100',
         rating: 4.7,
         totalExperiences: 28
       },
@@ -227,12 +227,12 @@ export default function ExperiencesPage() {
         coordinates: [27.0360, 88.3957]
       },
       images: [
-        'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop'
+        'https://picsum.photos/800/600?random=17',
+        'https://picsum.photos/800/600?random=18'
       ],
       host: {
         name: 'Deepika Rai',
-        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop',
+        avatar: 'https://ui-avatars.com/api/?name=Deepika+Rai&background=random&color=fff&size=100',
         rating: 4.9,
         totalExperiences: 67
       },
@@ -258,12 +258,12 @@ export default function ExperiencesPage() {
         coordinates: [9.4981, 76.3388]
       },
       images: [
-        'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=800&h=600&fit=crop'
+        'https://picsum.photos/800/600?random=19',
+        'https://picsum.photos/800/600?random=20'
       ],
       host: {
         name: 'Krishna Menon',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop',
+        avatar: 'https://ui-avatars.com/api/?name=Krishna+Menon&background=random&color=fff&size=100',
         rating: 4.5,
         totalExperiences: 41
       },
@@ -288,12 +288,12 @@ export default function ExperiencesPage() {
         coordinates: [19.1071, 81.9535]
       },
       images: [
-        'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800&h=600&fit=crop'
+        'https://picsum.photos/800/600?random=21',
+        'https://picsum.photos/800/600?random=22'
       ],
       host: {
         name: 'Suresh Patel',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
+        avatar: 'https://ui-avatars.com/api/?name=Suresh+Patel&background=random&color=fff&size=100',
         rating: 4.4,
         totalExperiences: 23
       },
