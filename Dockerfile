@@ -57,9 +57,9 @@ EXPOSE 3000
 # Set hostname to localhost
 ENV HOSTNAME "0.0.0.0"
 
-# Health check (use PORT env var)
+# Health check (use PORT env var and new healthz endpoint)
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:${PORT:-3000}/ || exit 1
+  CMD curl -f http://localhost:${PORT:-3000}/api/healthz || exit 1
 
 # Start the application
 CMD ["npm", "start"]
