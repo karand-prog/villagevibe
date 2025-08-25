@@ -256,7 +256,7 @@ export default function FavoritesPage() {
               <div className="text-center py-12">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto"></div>
                 <p className="mt-4 text-earth-600">Loading saved items...</p>
-              </div>
+                        </div>
             ) : activeTab === 'villages' && filteredVillages.length === 0 ? (
               <div className="text-center py-12">
                 <Heart className="w-16 h-16 mx-auto mb-4 text-earth-400" />
@@ -274,8 +274,8 @@ export default function FavoritesPage() {
                   className="bg-primary-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-primary-700 transition-colors"
                 >
                   Explore Villages
-                </Link>
-              </div>
+                      </Link>
+                  </div>
             ) : activeTab === 'experiences' && filteredExperiences.length === 0 ? (
               <div className="text-center py-12">
                 <Star className="w-16 h-16 mx-auto mb-4 text-earth-400" />
@@ -312,7 +312,7 @@ export default function FavoritesPage() {
                         <Heart className="w-4 h-4 text-red-500 fill-current" />
                       </button>
                     </div>
-                    <div className="p-4">
+                        <div className="p-4">
                       <h4 className="font-semibold text-earth-800 mb-2 line-clamp-2">{item.title}</h4>
                       <p className="text-sm text-earth-600 mb-3 line-clamp-2">{item.description}</p>
                       <div className="flex items-center justify-between mb-3">
@@ -339,7 +339,7 @@ export default function FavoritesPage() {
                 ))}
               </div>
             )}
-          </div>
+            </div>
         </div>
       </div>
 
